@@ -40,25 +40,25 @@ public class ContactTest {
     // My tests start here
     @Test
     void constructor_handlesNullName() {
-        Contact c = new Contact(null, "+1 617 555 0101");
+        Contact c = new Contact(null, "555 0000");
         assertNull(c.getName());
     }
 
     @Test
     void constructor_handlesNullPhone() {
-        Contact c = new Contact("Ada Lovelace", null);
+        Contact c = new Contact("Chris", null);
         assertNull(c.getPhone());
     }
 
     @Test
     void toString_handlesNullName() {
-        Contact c = new Contact(null, "+1 617 555 0101");
+        Contact c = new Contact(null, "555 0000");
         assertTrue(c.toString().contains("null"));
     }
 
     @Test
     void toString_handlesNullPhone() {
-        Contact c = new Contact("Ada Lovelace", null);
+        Contact c = new Contact("Chris", null);
         assertTrue(c.toString().contains("null"));
     }
 } 
